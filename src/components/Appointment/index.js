@@ -8,8 +8,9 @@ import Status from "./Status";
 import Error from "./Error";
 import Confirm from "./Confirm";
 import useVisualMode from "hooks/useVisualMode";
+import PropTypes from "prop-types";
 
-export default function Appointment(props) {
+function Appointment(props) {
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE = "CREATE";
@@ -93,3 +94,10 @@ export default function Appointment(props) {
     </article>
   );
 }
+
+// ROD TEST
+// Appointment.propTypes = {
+//   id: PropTypes.number.isRequired
+// }
+
+export default Appointment;
