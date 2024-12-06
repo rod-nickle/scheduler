@@ -79,4 +79,30 @@ export default {
       });
     }
   }),
+
+  put: jest.fn((url) => {
+    if (url === "/api/days") {
+      return Promise.resolve({
+        status: 200,
+        statusText: "OK",
+        data: { status: 204, statusText: "No Content" } ,
+      });
+    }
+
+    if (url.match(/^\/api\/appointments\/\d+$/)) {
+      return Promise.resolve({
+        status: 200,
+        statusText: "OK",
+        data: { status: 204, statusText: "No Content" } ,
+      });
+    }
+
+    if (url === "/api/interviewers") {
+      return Promise.resolve({
+        status: 200,
+        statusText: "OK",
+        data: { status: 204, statusText: "No Content" } ,
+      });
+    }
+  }),
 };
